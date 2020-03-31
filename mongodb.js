@@ -1,4 +1,4 @@
-// CLI (connect with database via terminal) --> /Users/raimonlpez/mongodb/bin/mongod --dbpath=/Users/raimonlpez/mongodb-data
+// CLI --> /Users/raimonlpez/mongodb/bin/mongod --dbpath=/Users/raimonlpez/mongodb-data
 // CRUD - CREATE READ UPDATE DELETE ::
 
 // insertOne, insertMany
@@ -17,7 +17,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
   }
   const db = client.db(databaseName);
 
-  /*
+  
   db.collection("users").findOne({ age: 22 }, (error, user) => {
     if (error) {
       return console.log("Unable to fetch...");
@@ -30,7 +30,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
 
   // find by ID:
 
-  /*
+  
   db.collection("users").findOne(
     { _id: new ObjectID("5e820ce3f12c12062b6d5752") },
     (error, user) => {
@@ -72,7 +72,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
         return console.log("Unable to fetch data...");
       }
       console.log(task);
-    });*/
+    });
 
   db.collection("users").updateOne({ _id: new ObjectID("5e81eac2ad7d4605e592d80b") }, {
     $set: {
