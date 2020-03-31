@@ -26,7 +26,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
       return console.log("user not found");
     }
     console.log(user);
-  });*/
+  });
 
   // find by ID:
 
